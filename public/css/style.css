@@ -1,0 +1,622 @@
+*{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*
+------------------------------------------------------------------
+Buttons
+------------------------------------------------------------------
+*/
+
+.btn-green{
+    background: #5D8861;
+    color: #ffffff;
+    border-radius: 2px;
+    border: none;
+    padding: 10px 20px;
+}
+
+.btn-light{
+    background: #A1C1A3;
+    color: #ffffff;
+    border-radius: 2px;
+    border: none;
+    padding: 10px 20px;
+}
+
+.btn-red{
+    background: #d90429;
+    color: #ffffff;
+    border-radius: 2px;
+    border: none;
+    padding: 10px 20px;
+}
+
+
+/*
+------------------------------------------------------------------
+Box Flex
+------------------------------------------------------------------
+*/
+.box{
+    position: relative;
+    z-index: 1;
+    margin: 5px 0;
+    font-size: 16px;
+    background: #A1C1A3;
+    color:#fff;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    border: none;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.box::before{
+    content: "";
+    height: 100%;
+    width: 5px;
+    background-color: #5D8861;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.4s all;
+}
+
+.box:hover::before{
+    width: 100%;
+}
+
+.boxw{
+    position: relative;
+    z-index: 1;
+    margin: 5px 0;
+    font-size: 16px;
+    background: #ffffff;
+    color:#495057;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    border: none;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+.boxw::before{
+    content: "";
+    height: 100%;
+    width: 5px;
+    background-color: #5D8861;
+    position: absolute;
+    color: #fff;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.boxw2{
+    position: relative;
+    z-index: 1;
+    margin: 5px 0;
+    font-size: 16px;
+    background: #ffffff;
+    color:#495057;
+    padding: 10px 40px 10px 20px;
+    box-sizing: border-box;
+    border: none;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+}
+
+.boxw2::before{
+    content: "";
+    height: 100%;
+    width: 5px;
+    background-color: #5D8861;
+    position: absolute;
+    color: #fff;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.boxt{
+    position: relative;
+    z-index: 1;
+    margin: 5px 45px;
+    font-size: 16px;
+    background: none;
+    color:black;
+    padding: 0 30px;
+    box-sizing: border-box;
+    border: none;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.boxt::before{
+    content: "";
+    height: 100%;
+    width: 5px;
+    background-color: #5D8861;
+    position: absolute;
+    color: #fff;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/*
+------------------------------------------------------------------
+Bagian Header
+------------------------------------------------------------------
+*/
+
+.header{
+    background: #FFF5EC;
+    text-align: center;
+}
+
+.header ul, .footer ul{
+    list-style: none;
+    padding: 20px 0;
+}
+
+.header ul li{
+    display: inline;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-size: 14pt;
+    padding: 0 5%;
+}
+
+.header ul li a:hover{
+    color: #5D8861;
+    transition: .3s;
+}
+
+.header ul li img{
+    width: 50px;
+}
+
+.header ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+#logo{
+    width: 50px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+
+/*
+------------------------------------------------------------------
+Bagian Footer
+------------------------------------------------------------------
+*/
+
+.footer {
+    height: 100vh;
+    background: #FFF5EC;
+    color: #5D8861;
+}
+
+.footer h2{
+    font-weight: bold;
+}
+
+.konten{
+    padding: 100px 0 0 0;
+}
+
+.icon img{
+    width : 450px;
+}
+
+.footer ul img{
+    width: 25px;
+}
+
+.footer a{
+    text-decoration: none;
+    color: #5D8861;
+}
+
+.footer ul li{
+    display: inline;
+    padding-right: 20px;
+}
+
+.copy{
+    text-align: center;
+}
+
+.second{
+    margin-top: 80px;
+}
+
+/*
+------------------------------------------------------------------
+Bagian Dashboard
+------------------------------------------------------------------
+left side
+==================================================================
+*/
+nav{
+    position: fixed;
+    background: #FFEDDE;
+    color: #5D8861;
+    height: 100%;
+    width: 300px;
+    padding: 0 30px;
+}
+
+.dashboard ul li a{
+    text-decoration: none;
+    color: #5D8861;
+}
+
+.nav-active{
+    font-weight: bold;
+}
+
+.dashboard .admin img{
+    width: 80px;
+    border-radius: 50%;
+}
+
+.dashboard img{
+    width: 50px;  
+}
+
+.atap{
+    text-align: center;
+    padding: 20px 0 0 0;
+}
+
+.admin{
+    display: flex;
+    color: black;
+    padding: 40px 0;
+}
+
+.admin ul{
+    list-style: none;
+    margin-top: 15px;
+    margin-left: -20px;
+}
+
+.name{
+    font-weight: bold;
+}
+
+.menu ul{
+    list-style: none;
+    margin-left: -30px;
+    margin-top: 20px;
+}
+
+.menu ul li{
+    padding: 0 0 20px 0;
+}
+
+nav .btn-green{
+    width: 100%;
+    margin-top: 25vh;
+}
+
+/*
+======================
+top side
+======================
+*/
+.main{
+    margin-left: 300px;
+    background: #FFF5EC;
+}
+
+.header{
+    background: #5D8861;
+    display: flex;
+    width: 100%;
+    padding: 15px;
+    position: relative;
+    right: 0;
+    height: 12vh;
+}
+
+.header img{
+    border-radius: 50%;
+}
+
+.top{
+    display: inline;
+    position: absolute;
+    right: 70px;
+    top: 12px;
+}
+
+.top button{
+    margin-right: 50px;
+}
+
+.top p{
+    margin-left: 43vh;
+    margin-top: -38px;
+}
+
+.top a{
+    color: #ffffff;
+}
+/*
+=========================
+Content
+=========================
+*/
+.content{
+    padding: 30px 50px;
+}
+
+svg{
+    width:40px;
+    height:40px;
+}
+
+rect{
+    width:40px;
+    height:40px;
+    fill: #5D8861;
+    rx: 10px;
+    ry: 10px;
+}
+
+.title{
+    display: flex;
+}
+
+.title p{
+    font-weight: bold;
+    padding: 10px 10px;
+}
+
+/*
+=========================
+Content card
+=========================
+*/
+.card{
+    background: #5D8861;
+    color: #ffffff;
+}
+
+.card-body{
+    padding: 50px 20px;
+}
+
+.card-title{
+    font-weight: bold;
+}
+
+.inc{
+    margin-top: 30px;
+}
+
+/*
+=========================
+Content Table
+=========================
+*/
+.content-table{
+    margin-top: 40px;
+    background: #FFEDDE;
+    color: #495057;
+}
+
+.margin{
+    padding: 20px 30px;
+}
+
+.content-table h5{
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+
+.content-table .title{
+    margin-bottom: 30px;
+}
+
+.content-table table .btn-green{
+    padding: 2px 20px;
+    font-size: 10pt;
+}
+
+/*
+------------------------------------------------------------------
+Bagian Header admin
+------------------------------------------------------------------
+*/
+
+.right{
+    float: right;
+}
+
+.header-adm{
+    height: 12vh;
+    background: #5D8861;
+}
+
+.left{
+    float: left;
+}
+
+.logo{
+    margin: -20px 20px 0 -30px;
+    padding: 15px;
+    width: 12vh;
+    height: 12vh;
+    background: #A1C1A3;
+    text-align: center;
+}
+
+.header-adm .left img{
+    width: 40px;
+}
+
+.header-adm .left .btn-light{
+    padding: 10px 20px;
+}
+
+.header-adm .left button{
+    margin-left: 70px;
+    margin-top: -60px;
+}
+
+.header-adm .right img{
+    width: 50px;
+    border-radius: 50%;
+}
+
+.header-adm .right .top p{
+    margin-left: 35vh;
+}
+
+/*
+------------------------------------------------------------------
+Bagian Header admin
+------------------------------------------------------------------
+*/
+.add{
+    padding: 5% 5%;
+    background: #FFF5EC;
+}
+
+.add h1{
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-control{
+    height: 150px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.add form{
+    margin-top: 40px;
+}
+
+.add .form-group{
+    margin-bottom: 60px;
+}
+
+.form-group h4{
+    margin-bottom: 30px;
+}
+
+input[type="file"]{
+    display: none;
+}
+
+.form-group label{
+    border: 2px solid #5D8861;
+    color: #5D8861;
+    background: none;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.add .right .btn-green, .add .left .btn-red{
+    width: 200px;
+}
+
+/*
+------------------------------------------------------------------
+Bagian Profile Admin
+------------------------------------------------------------------
+*/
+.profile{
+    height: 100%;
+    padding: 50px 300px;
+    text-align: center;
+    background: #FFF5EC;
+}
+
+.profile img{
+    border-radius: 50%;
+    width: 230px;
+}
+
+.profile h1{
+    font-size: 60pt;
+    color: #5D8861;
+    font-weight: bold;
+}
+
+.profile .row{
+    margin-top: 50px;
+}
+
+
+/*
+------------------------------------------------------------------
+Bagian Login
+------------------------------------------------------------------
+*/
+.login{
+    text-align: center;
+    margin: 0;
+    padding: 50px 300px;
+    height: 100%;
+    background: #5D8861;
+}
+
+.login img{
+    width: 70px;
+}
+
+.square{
+    padding: 100px 0;
+    background: #FFEDDE;
+}
+
+.pd{
+    margin-top: 50px;
+    padding: 0 200px;
+}
+
+.login .pd h1{
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.arrow{
+    background: none;
+    border: none;
+}
+
+.login .arrow{
+    float: right;
+}
+
+.side{
+    padding: 20px 240px 40px 240px;
+}
+
+.arrow img{
+    width: 50px;
+}
