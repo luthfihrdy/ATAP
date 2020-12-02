@@ -33,8 +33,8 @@
                 <!--header-->
                 <div class="header">
                     <div class="top">
-                        <button class="btn-light"><a href="{{ url('/home')}}">Dashboard</a></button>
-                        <a href=""><img src="asset/ruby.png" alt="profile"></a>
+                        <button class="btn-light"><a href="{{ url('/dashboard')}}">Dashboard</a></button>
+                        <a href="{{ url('/profile')}}"><img src="asset/ruby.png" alt="profile"></a>
                         <p name="adm"><a href="{{ url('/profile')}}">{{ Auth::user()->nama }}</a></p>
                     </div>
                 </div>

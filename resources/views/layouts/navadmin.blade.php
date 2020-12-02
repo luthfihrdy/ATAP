@@ -69,8 +69,8 @@
             <div class="header">
                 <div class="top">
                     <button class="btn-light">View Site</button>
-                    <a href=""><img src="{{asset('asset/ruby.png')}}" alt="profile"></a>
-                    <p class="adm" style="text-align:left"><a href="#">{{ Auth::user()->nama }}</a></p>
+                    <a href="{{ route('profile') }}"><img src="{{asset('asset/ruby.png')}}" alt="profile"></a>
+                <p class="adm" style="text-align:left"><a href="{{ route('profile') }}">{{ Auth::user()->nama }}</a></p>
                 </div>
             </div>
             <main>
