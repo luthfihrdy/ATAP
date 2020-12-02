@@ -19,6 +19,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/add', [App\Http\Controllers\CrudController::class, 'add'])->name('add');
-Route::get('/profile', [App\Http\Controllers\HomeController::class, 'profile'])->name('profile');
+Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+
+//create
+Route::get('/add', [App\Http\Controllers\ArtikelController::class, 'add'])->name('add');
+//route untuk simpan data 
+Route::post('/adds', [App\Http\Controllers\ArtikelController::class, 'createArtikel'])->name('create');
+
+//update
+Route::get('/edit/{artikel}', [App\Http\Controllers\ArtikelController::class, 'edit'])->name('edit');
+

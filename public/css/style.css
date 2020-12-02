@@ -512,6 +512,10 @@ Bagian Header admin
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+.form-kat {
+    height: 50px; 
+}
+
 .add form{
     margin-top: 40px;
 }
@@ -581,7 +585,7 @@ Bagian Login
     text-align: center;
     margin: 0;
     padding: 50px 300px;
-    height: 100%;
+    height: 100vh;
     background: #5D8861;
 }
 
