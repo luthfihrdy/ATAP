@@ -32,16 +32,7 @@ class ArtikelController extends Controller
     }
 
     public function createArtikel(Request $request) {
-        //dd($request);
-        // $validateData = $request->validate([
-        //     'judul'   => 'required|min:0',
-        //     'planting' => 'required|min:0',
-        //     'preparing' => 'required|min:0',
-        //     'howto' => 'required|min:0',
-        //     'funfact' => 'required|min:0',
-        //     'kategori' => 'required|min:0',
-
-        // ]);
+        dd($request);
 
         $this->validate($request, [
             'judul'   => 'required|min:0',
@@ -50,6 +41,7 @@ class ArtikelController extends Controller
             'kategori' => 'required|min:0',
             'file' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
+
         $image = $request->file('file');
         $fileName = time().'.'.$image->getClientOriginalName();
         $destinationPath = public_path('/asset/images');
@@ -74,5 +66,49 @@ class ArtikelController extends Controller
         $result = Artikel::where('id_artikel',$artikel)->first();
 
         return view('artikel.edit',compact('result'));
+    }
+
+    public function update(Request $request) {
+        //dd($request);
+        $this->validate($request, [
+            'id_artikel' => 'required|min:0',
+            'judul'   => 'required|min:0',
+            'konten' => 'required|min:0',
+            'funfact' => 'required|min:0',
+            'kategori' => 'required|min:0',
+            'file' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        if ($request->hasFile('file')) {
+            $image = $request->file('file');
+            $fileName = time().'.'.$image->getClientOriginalName();
+            $destinationPath = public_path('/asset/images');
+            $image->move($destinationPath, $fileName);
+            $data = array(
+                'id_akun' => $request->id_akun,
+                'judul' =>  $request->judul,
+                'content' => $request->konten,
+                'funfact' => $request->funfact,
+                'nama_file' => $fileName,
+                'kategori' => $request->kategori,
+                'views' => 0
+            );
+        }else {
+            $data = array(
+                'id_akun' => $request->id_akun,
+                'judul' =>  $request->judul,
+                'content' => $request->konten,
+                'funfact' => $request->funfact,
+                'nama_file' => $request->file_name,
+                'kategori' => $request->kategori,
+                'views' => 0
+            );
+        }
+        //Eksekusi
+        Artikel::where('id_artikel',$request->id_artikel)->update($data);
+            $request->session()->flash('pesan',"Data berhasil diperbarui");
+            return redirect()->route('dashboard');
+        
+
     }
 }

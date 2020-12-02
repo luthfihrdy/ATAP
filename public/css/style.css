@@ -31,6 +31,11 @@ Buttons
     border-radius: 2px;
     border: none;
     padding: 10px 20px;
+    width: 500px;
+}
+.btn-red:hover, .btn-red:visited {
+    text-decoration: none;
+    color: white;
 }
 
 

@@ -28,4 +28,6 @@ Route::post('/adds', [App\Http\Controllers\ArtikelController::class, 'createArti
 
 //update
 Route::get('/edit/{artikel}', [App\Http\Controllers\ArtikelController::class, 'edit'])->name('edit');
+//eksekusi update
+Route::put('/edits/{artikel}', [App\Http\Controllers\ArtikelController::class, 'update'])->name('update');
 
