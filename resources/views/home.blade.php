@@ -42,7 +42,7 @@
                 <div class="margin">
                     <div class="title">
                         <h5>Articles</h5>
-                        <button class="btn-green">Add New Article</button>
+                        <button class="btn-green"><a href="{{ url('/add') }}">Add New Article</a></button>
                     </div>
                     <table class="table table-borderless">
                         <thead>

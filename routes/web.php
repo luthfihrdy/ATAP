@@ -21,3 +21,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/add', [App\Http\Controllers\CrudController::class, 'add'])->name('add');
+Route::get('/profile', [App\Http\Controllers\HomeController::class, 'profile'])->name('profile');
