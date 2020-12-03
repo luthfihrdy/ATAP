@@ -3,7 +3,7 @@
 
 <div class="add">
     <h1>EDIT ARTICLE</h1>
-    <form action="{{ route('update',['artikel'=>$result->id_artikel])}}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('update',['artikel'=>$result->id_artikel])}}" method="POST" enctype="multipart/form-data" id="formEdit">
         @method('PUT')
         @csrf
         <input type="hidden" name="id_artikel" value="{{$result->id_artikel}}">
@@ -32,13 +32,23 @@
             <h4 class="box">CATEGORY</h4>
             <input type="text" class="form-control form-kat @error('kategori') is-invalid @enderror" name="kategori" placeholder="description" rows="5" value="{{old('kategori') ?? $result->kategori}}">
         </div>
-        <div class="left">
-            <a class="btn-red" href="#">Delete</a>
-        </div>
-        <div class="right">
-            <button class="btn-green" type="submit">Save</button>
-        </div>
+        
     </form>
+    
+    <div class="left">
+        <button type="submit" class="btn-red" href="#" form="formDelete">Delete</button>
+    </div>
+    <div class="right">
+        <button class="btn-green" type="submit" form="formEdit">Save</button>
+    </div>
+
+    <form action="{{route('delete',['artikel' => $result->id_artikel])}}" method="POST" id="formDelete">
+        @method('DELETE')
+        @csrf
+        <input type="hidden" name="id_artikel" value="{{$result->id_artikel}}">
+          
+    </form>
+    
 </div>
 <Script>
      CKEDITOR.replace('form-control',{

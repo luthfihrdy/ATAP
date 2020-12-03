@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Artikel;
+use DB;
 
 class ArtikelController extends Controller
 {
@@ -24,7 +25,8 @@ class ArtikelController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $artikel_v = DB::table('v_artikel')->select('id_artikel','judul','created_at','views','nama')->get();
+        return view('artikel.index',['artikel' => $artikel_v]);
     }
 
     public function add() {
@@ -32,7 +34,7 @@ class ArtikelController extends Controller
     }
 
     public function createArtikel(Request $request) {
-        dd($request);
+        //dd($request);
 
         $this->validate($request, [
             'judul'   => 'required|min:0',
@@ -63,6 +65,8 @@ class ArtikelController extends Controller
     }
 
     public function edit($artikel){
+        //increment views
+        //$data = Artikel::where('id_artikel',$artikel)->increment('views');
         $result = Artikel::where('id_artikel',$artikel)->first();
 
         return view('artikel.edit',compact('result'));
@@ -108,7 +112,10 @@ class ArtikelController extends Controller
         Artikel::where('id_artikel',$request->id_artikel)->update($data);
             $request->session()->flash('pesan',"Data berhasil diperbarui");
             return redirect()->route('dashboard');
-        
-
+    }
+    public function delete(Request $request) {
+        $artikel = Artikel::where('id_artikel',$request->id_artikel)->delete();
+        //$artikel->delete();
+        return redirect()->route('dashboard')->with('pesan',"Data berhasil dihapus");
     }
 }

@@ -9,6 +9,14 @@ Buttons
 ------------------------------------------------------------------
 */
 
+.showMore:hover {
+    text-decoration: none;
+    color: rgb(60, 60, 60);
+}
+.showMore:visited {
+    color: black;
+}
+
 .btn-green{
     background: #5D8861;
     color: #ffffff;

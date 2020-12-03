@@ -26,7 +26,9 @@ class DashboardController extends Controller
     public function index()
     {
         //$artikel = Artikel::all();
-        $artikel_v = DB::table('v_artikel')->select('id_artikel','judul','created_at','views','nama')->get();
-        return view('dashboard',['artikel' => $artikel_v]);
+        $artikel_c = DB::table('v_artikel')->select('id_artikel','judul','created_at','views','nama')->get();
+        $artikel_v = DB::table('v_artikel')->select('id_artikel','judul','created_at','views','nama')->take(5)->orderBy('created_at','desc')->get();
+        $artikel_s = DB::table('v_artikel')->select('id_artikel','judul','created_at','views','nama')->sum('views');
+        return view('dashboard',['artikel' => $artikel_v,'artikel_c' => $artikel_c,'jumlah' => $artikel_s]);
     }
 }

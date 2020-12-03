@@ -28,7 +28,10 @@
     <!--Our Css-->
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 
-    
+    {{-- dataTable --}}
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css"/>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     
 </head>
 <body>
@@ -48,7 +51,7 @@
             <div class="menu">
                 <ul>
                     <li class="{{ Request::is('dashboard') ? 'nav-active' : '' }}"><a href="{{route('dashboard')}}">Dashboard</a></li> <!--use class nav-active if in current page-->
-                    <li class="{{ Request::is('articles') ? 'nav-active' : '' }}"><a href="">Articles</a></li>
+                    <li class="{{ Request::is('artikel') ? 'nav-active' : '' }}"><a href="{{route('artikel')}}">Articles</a></li>
                 </ul>
             </div>
             <a href="{{ route('logout') }}" onclick="event.preventDefault();
