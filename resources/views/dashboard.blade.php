@@ -60,6 +60,7 @@
                               <td>{{$data->created_at}}</td>
                               <td>{{$data->nama}}</td>
                               <td>{{$data->views}}</td>
+                          <td><a href="{{route('delete',['id_artikel'=>$data->id_artikel])}}"><button class="btn-green">delete</button></a></td>
                               <td><a href="{{route('edit',['artikel'=>$data->id_artikel])}}"><button class="btn-green">EDIT</button></a></td>
                           </tr>
                           @empty

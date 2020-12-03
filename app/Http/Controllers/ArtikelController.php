@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Validator,Redirect,Response;
 use App\Artikel;
 
 class ArtikelController extends Controller
@@ -75,4 +76,16 @@ class ArtikelController extends Controller
 
         return view('artikel.edit',compact('result'));
     }
+
+    public function deleteRecord(Request $request, $id)
+    {
+       
+        if(!$id){
+           return redirect('/database');
+        }
+
+        $check = Artikel::where('id_artikel', $id)->delete();
+        return Redirect::to("database")->withSuccess('Great! data successfully deleted');
+    }
+
 }
