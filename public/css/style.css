@@ -637,3 +637,248 @@ Bagian Login
 .arrow img{
     width: 50px;
 }
+
+/*
+==================================================================
+------------------------------------------------------------------
+Bagian Home
+------------------------------------------------------------------
+==================================================================
+*/
+.section1{
+    background: #FFF5EC;
+    padding: 70px 70px 40px 70px;
+}
+
+.wm{
+    font-size: 100pt;
+    font-weight: bold;
+    color: #f7ece6;
+    margin-bottom: -20px;
+}
+
+.section1 h2{
+    font-size: 40pt;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: -5px;
+}
+
+.section1 .search{
+    margin-top: 40px;
+    padding: 15px 10px 15px 20px;
+    margin-right: 120vh;
+    background: #fff;
+}
+
+.section1 input[type="text"]{
+    border: none;
+    padding: 10px 80px 10px 10px;
+}
+
+.section1 .go{
+    background: #5D8861;
+    color: #fff;
+    padding: 10px 45px;
+    border: none;
+    border-radius: 50px 0 0 0;
+}
+
+/*
+=-=-=-=-=-=-=
+section 2
+=-=-=-=-=-=-=
+*/
+
+.section2{
+    padding: 40px 0 40px 0;
+    background: #5D8861;
+}
+
+.section2 .scroll{
+    background: #FFF5EC;
+    margin-top: 40px;
+    margin-right: 180vh;
+    padding: 15px 0 15px 10vh;
+    border-radius: 0 50px 50px 0;
+}
+
+.scroll img{
+    transform: rotate(90deg);
+}
+
+.scroll button{
+    font-weight: bold;
+    color: #5D8861;
+}
+
+/*
+=-=-=-=-=-=-=
+Image sayur
+=-=-=-=-=-=-=
+*/
+.vag img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 130vh;
+    margin-top: -120px;
+}
+
+/*
+=-=-=-=-=-=-=
+Section3
+=-=-=-=-=-=-=
+*/
+
+.section3{
+    background: #FFF5EC;
+    padding: 70px 150px 80px 70px;
+}
+
+.section3 .boxt, .section5 .boxt{
+    font-size: 30pt;
+    font-weight: bold;
+}
+
+.section3 .boxt::before, .section5 .boxt::before{
+    width: 20px;
+}
+
+.section3 p, .section5 p{
+    text-align: justify;
+    margin-top: 10px;
+    font-size: 14pt;
+    color: #495057;
+}
+
+/*
+=-=-=-=-=-=-=
+Image Article
+=-=-=-=-=-=-=
+*/
+.section4{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+    background: #FFF5EC;
+}
+
+.img-article{
+    position: relative;
+    flex: 1;
+    max-width: 450px;
+    height: 400px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+
+.img-article img{
+    position: relative;
+    width: 400px;
+}
+
+.img-article .detail{
+    z-index: 1;
+    position: absolute;
+    bottom: -30px;
+    background: #5d8861a4;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    height: 150px;
+    padding: 30px;
+    border-radius: 5px;
+    opacity: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.img-article:hover .detail{
+    bottom: 0;
+    transition: .6s;
+    opacity: 1;
+}
+
+.detail h2{
+    font-weight: bold;
+}
+
+.detail a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.detail p{
+    font-size: 10pt;
+}
+
+.btn-link{
+    padding: 25vh 10vh;
+}
+
+.btn-link a{
+    color: #5D8861;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*
+=-=-=-=-=-=-=
+Section 5
+=-=-=-=-=-=-=
+*/
+.section5{
+    background: #FFEDDE;
+    padding: 70px 150px 100px 70px;
+}
+
+/*
+=-=-=-=-=-=-=
+Section 6
+=-=-=-=-=-=-=
+*/
+.section6{
+    background: #FFEDDE;
+}
+
+.icon{
+    position: relative;
+    display: flex;
+}
+
+.bg{
+    position: absolute;
+    max-width: 50vh;
+    min-width: 50vh;
+    top: 0;
+    right: 0;
+}
+
+.bg1{
+    position: absolute;
+    max-width: 65vh;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.section6 .wm{
+    color: #f0e8e3;
+}
+
+.keterangan{
+    background: #FFEDDE;
+    text-align: center;
+    padding: 0 60vh 40px 60vh;
+    color: #495057;
+}
+
+.keterangan .btn-link img{
+    width: 50px;
+}
+
+.keterangan .btn-link{
+    padding: 10px 0;
+}
