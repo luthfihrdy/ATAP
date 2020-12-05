@@ -41,12 +41,16 @@
             <div class="atap">
                 <img src="{{asset('asset/logo-hitam.png')}}" alt="logo">
             </div>
-            <div class="admin">
+            <div class="admin row">
+                <div class="col-4"> 
                 <img src="{{asset('asset/ruby.png')}}" alt="image">
+                </div>
+                <div class="col-8">
                 <ul>
                     <li class="name" name="adm">{{ Auth::user()->nama }}</li>
                     <li>Administrator</li>
                 </ul>
+                </div>
             </div>
             <div class="menu">
                 <ul>
@@ -55,7 +59,7 @@
                 </ul>
             </div>
             <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                             document.getElementById('logout-form').submit();">
+            document.getElementById('logout-form').submit();">
                 <button class="btn-green">
                     {{ __('Logout') }}
                 </button>
@@ -67,13 +71,15 @@
     
         <!--main content-->
         <div class="main">
-    
+
             <!--header-->
-            <div class="header">
+            <div class="head">
                 <div class="top">
-                    <button class="btn-light">View Site</button>
-                    <a href=""><img src="{{asset('asset/ruby.png')}}" alt="profile"></a>
-                    <p class="adm" style="text-align:left"><a href="#">{{ Auth::user()->nama }}</a></p>
+                    <ul>
+                        <li><a href="{{route('home')}}"><button class="btn-light">View Site</button></a></li>
+                        <li><a href=""><img src="{{asset('asset/ruby.png')}}" alt="profile"></a></li>
+                        <li p name="adm"><a href="#">{{ Auth::user()->nama }}</a></li>
+                    </ul>
                 </div>
             </div>
             <main>

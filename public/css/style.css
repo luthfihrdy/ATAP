@@ -1,6 +1,12 @@
 *{
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    transition-property: all;
+    transition-timing-function: ease;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 /*
@@ -8,14 +14,6 @@
 Buttons
 ------------------------------------------------------------------
 */
-
-.showMore:hover {
-    text-decoration: none;
-    color: rgb(60, 60, 60);
-}
-.showMore:visited {
-    color: black;
-}
 
 .btn-green{
     background: #5D8861;
@@ -39,11 +37,6 @@ Buttons
     border-radius: 2px;
     border: none;
     padding: 10px 20px;
-    width: 500px;
-}
-.btn-red:hover, .btn-red:visited {
-    text-decoration: none;
-    color: white;
 }
 
 
@@ -211,6 +204,10 @@ Bagian Header
     text-align: center;
 }
 
+.marg-top {
+    margin-top: -6.2%;
+}
+
 
 /*
 ------------------------------------------------------------------
@@ -283,13 +280,13 @@ nav{
     font-weight: bold;
 }
 
-.dashboard .admin img{
-    width: 80px;
-    border-radius: 50%;
+.dashboard .atap img, .dashboard .top img{
+    width: 50px; 
 }
 
-.dashboard img{
-    width: 50px;  
+.dashboard .admin img{
+    width: 200%;
+    border-radius: 50%;
 }
 
 .atap{
@@ -300,13 +297,13 @@ nav{
 .admin{
     display: flex;
     color: black;
-    padding: 40px 0;
+    margin: 40px 0;
 }
 
 .admin ul{
     list-style: none;
     margin-top: 15px;
-    margin-left: -20px;
+    margin-left: -5px;
 }
 
 .name{
@@ -338,7 +335,7 @@ top side
     background: #FFF5EC;
 }
 
-.header{
+.head{
     background: #5D8861;
     display: flex;
     width: 100%;
@@ -348,27 +345,36 @@ top side
     height: 12vh;
 }
 
-.header img{
+.head img{
     border-radius: 50%;
 }
 
 .top{
     display: inline;
     position: absolute;
-    right: 70px;
+    right: 0;
     top: 12px;
 }
 
+.top ul{
+    list-style: none;
+}
+
+.top ul li{
+    display: inline;
+    padding-right: 40px;
+}
+
+.top ul li:nth-child(2){
+    display: inline;
+    padding-right: 10px;
+}
+
 .top button{
-    margin-right: 50px;
+    margin-left: -50px;
 }
 
-.top p{
-    margin-left: 43vh;
-    margin-top: -38px;
-}
-
-.top a{
+.top ul li a{
     color: #ffffff;
 }
 /*
@@ -473,6 +479,13 @@ Bagian Header admin
     float: left;
 }
 
+.top-left{
+    display: inline;
+    position: absolute;
+    left: 30px;
+    top: 20px;
+}
+
 .logo{
     margin: -20px 20px 0 -30px;
     padding: 15px;
@@ -506,11 +519,11 @@ Bagian Header admin
 
 /*
 ------------------------------------------------------------------
-Bagian Header admin
+Bagian Form admin
 ------------------------------------------------------------------
 */
 .add{
-    padding: 5% 5%;
+    padding: 50px 10%;
     background: #FFF5EC;
 }
 
@@ -526,7 +539,7 @@ Bagian Header admin
 }
 
 .form-kat {
-    height: 50px; 
+    height: 50px;
 }
 
 .add form{
@@ -598,7 +611,7 @@ Bagian Login
     text-align: center;
     margin: 0;
     padding: 50px 300px;
-    height: 100vh;
+    height: 100%;
     background: #5D8861;
 }
 
@@ -624,6 +637,14 @@ Bagian Login
 .arrow{
     background: none;
     border: none;
+    color: #5D8861;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.section2 a{
+    text-decoration: none;
+    color: #5D8861;
 }
 
 .login .arrow{
@@ -637,3 +658,464 @@ Bagian Login
 .arrow img{
     width: 50px;
 }
+
+/*
+==================================================================
+------------------------------------------------------------------
+Bagian Home
+------------------------------------------------------------------
+==================================================================
+*/
+.home {
+    margin-top: -2%;
+}
+.section1{
+    background: #FFF5EC;
+    padding: 70px 70px 40px 70px;
+}
+
+.wm{
+    font-size: 100pt;
+    font-weight: bold;
+    color: #f7ece6;
+    margin-bottom: -20px;
+}
+
+.section1 h2{
+    font-size: 40pt;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: -5px;
+}
+
+.section1 .search{
+    margin-top: 40px;
+    padding: 15px 10px 15px 20px;
+    margin-right: 120vh;
+    background: #fff;
+}
+
+.section1 input[type="text"]{
+    border: none;
+    padding: 10px 80px 10px 10px;
+}
+
+.section1 .go{
+    background: #5D8861;
+    color: #fff;
+    padding: 10px 45px;
+    border: none;
+    border-radius: 50px 0 0 0;
+}
+
+/*
+=-=-=-=-=-=-=
+section 2
+=-=-=-=-=-=-=
+*/
+
+.section2{
+    padding: 40px 0 40px 0;
+    background: #5D8861;
+}
+
+.section2 .scroll{
+    background: #FFF5EC;
+    margin-top: 40px;
+    margin-right: 180vh;
+    padding: 15px 0 15px 10vh;
+    border-radius: 0 50px 50px 0;
+}
+
+.scroll img{
+    transform: rotate(90deg);
+}
+
+.scroll button{
+    font-weight: bold;
+    color: #5D8861;
+}
+
+/*
+=-=-=-=-=-=-=
+Image sayur
+=-=-=-=-=-=-=
+*/
+.vag img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 130vh;
+    margin-top: 5%;
+}
+
+/*
+=-=-=-=-=-=-=
+Section3
+=-=-=-=-=-=-=
+*/
+
+.section3{
+    background: #FFF5EC;
+    padding: 70px 150px 80px 70px;
+}
+
+.section3 .boxt, .section5 .boxt{
+    font-size: 30pt;
+    font-weight: bold;
+}
+
+.section3 .boxt::before, .section5 .boxt::before{
+    width: 20px;
+}
+
+.home .section3 p, .section5 p{
+    text-align: justify;
+    margin-top: 10px;
+    font-size: 14pt;
+    color: #495057;
+}
+
+/*
+=-=-=-=-=-=-=
+Image Article
+=-=-=-=-=-=-=
+*/
+.section4{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background: #FFF5EC;
+}
+
+.img-article{
+    position: relative;
+    flex: 1;
+    max-width: 450px;
+    height: 400px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+
+.img-article img{
+    position: relative;
+    width: 400px;
+}
+
+.img-article .detail{
+    z-index: 1;
+    position: absolute;
+    bottom: -30px;
+    background: #5d8861a4;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    height: 150px;
+    padding: 30px;
+    border-radius: 5px;
+    opacity: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.img-article:hover .detail{
+    bottom: 0;
+    transition: .6s;
+    opacity: 1;
+}
+
+.detail h2{
+    font-weight: bold;
+}
+
+.detail a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.detail p{
+    font-size: 8pt;
+}
+
+.btn-link{
+    padding: 25vh 10vh;
+}
+
+.btn-link a{
+    color: #5D8861;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*
+=-=-=-=-=-=-=
+Section 5
+=-=-=-=-=-=-=
+*/
+.section5{
+    background: #FFEDDE;
+    padding: 70px 150px 100px 70px;
+}
+
+/*
+=-=-=-=-=-=-=
+Section 6
+=-=-=-=-=-=-=
+*/
+.section6{
+    background: #FFEDDE;
+}
+
+.icon{
+    position: relative;
+    display: flex;
+}
+
+.bg{
+    position: absolute;
+    max-width: 50vh;
+    min-width: 50vh;
+    top: 0;
+    right: 0;
+}
+
+.bg1{
+    position: absolute;
+    max-width: 65vh;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.section6 .wm{
+    color: #f0e8e3;
+}
+
+.keterangan{
+    background: #FFEDDE;
+    text-align: center;
+    padding: 0 60vh 40px 60vh;
+    color: #495057;
+}
+
+.keterangan .btn-link img{
+    width: 50px;
+}
+
+.keterangan .btn-link{
+    padding: 10px 0;
+}
+
+/*
+==================================================================
+------------------------------------------------------------------
+Bagian Artikel
+------------------------------------------------------------------
+==================================================================
+*/
+
+.article, .sub-article {
+    margin-top: -1.2%;
+}
+.article .wm, .sub-article .wm, .about .wm{
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.article .vag{
+    position: absolute;
+    right: 55vh;
+    top: 7.3vh;
+}
+
+
+.article .vag img{
+    width: 100vh;
+}
+
+.article .sub-title{
+    position: absolute;
+    right: 88vh;
+    top: 67vh;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+.article h2{
+    font-size: 30pt;
+}
+
+.article .section2{
+    display: flex;
+}
+
+.article .section3{
+    padding: 70px 100vh 80px 70px;
+}
+
+.content-article{
+    padding: 0 100px 10vh 32vh;
+    background: #FFF5EC;
+}
+
+/*
+==================================================================
+------------------------------------------------------------------
+Bagian Sub Artikel
+------------------------------------------------------------------
+==================================================================
+*/
+.sub-article .vag img{
+    width: 70vh;
+}
+
+.sub-article .vag{
+    position: absolute;
+    right: 75vh;
+    top: 15vh;
+}
+
+.sub-article .sub-title{
+    position: absolute;
+    right: 86vh;
+    top: 77vh;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 3px;
+    z-index: 1;
+}
+
+.sub-article h2{
+    font-size: 30pt;
+}
+/*
+=-=-=-=-=-=-=
+Section top
+=-=-=-=-=-=-=
+*/
+.sectiont .col-2{
+    padding: 0 30px 0 0;
+    background: #FFEDDE;
+    opacity: 1;
+}
+.sectiont{
+    background: #FFF5EC;
+    padding: 0 20px;
+    color: #495057;
+}
+
+.sectiont .col-10{
+    padding: 70px 70px 0 70px;
+}
+
+.sectiont .col-10 p{
+    font-size: 18pt;
+}
+
+.sectiont h3{
+    font-weight: bold;
+    color: black;
+}
+
+.funfact p{
+    padding: 10px 25px 0 20px;
+    font-size: 16pt;
+}
+
+.sectiont .boxt{
+    padding: 10px 0 10px 20px;
+    margin: 0;
+    font-size: 20pt;
+}
+
+.sectiont .boxt::before{
+    width: 10px;
+}
+
+.sub-article .section3 .boxt{
+    margin: 0 0 20px 0;
+    padding: 20px 40px 20px 40px;
+}
+
+.sub-article .section3 p, .sub-article .section3 li{
+    font-size: 16pt;
+    color: #495057;
+}
+
+.space{
+    margin-bottom: 10vh;
+}
+
+/*
+==================================================================
+------------------------------------------------------------------
+Bagian About
+------------------------------------------------------------------
+==================================================================
+*/
+.about {
+    margin-top: -1.5%;
+}
+
+.about .sub-title{
+    position: absolute;
+    right: 95vh;
+    top: 67vh;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+.about .section3{
+    padding: 150px 50vh;
+    text-align: center;
+    color: #495057;
+    font-size: 16pt;
+}
+
+.about h2 {
+    font-size: 30pt;
+}
+
+.about .section3 p{
+    z-index: 1;
+}
+
+.wmbg{
+    position: relative;
+}
+
+.wmbg img{
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    width: 60vh;
+    z-index: 0;
+    opacity: .1;
+}
+
+.about .section1 h3{
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.about .card{
+    background: none;
+    text-align: center;
+    border: none;
+}
+
+.about .card-title{
+    color: #5D8861;
+}
+
+.about .card-text{
+    color: #495057;
+    font-weight: bold;
+}
+
+.about .section1 .row{
+    padding: 0 150px;
+}
+

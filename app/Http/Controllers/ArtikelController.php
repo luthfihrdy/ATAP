@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Artikel;
 use DB;
+Use Exception;
+use Validator;
 
 class ArtikelController extends Controller
 {
@@ -41,7 +43,7 @@ class ArtikelController extends Controller
             'konten' => 'required|min:0',
             'funfact' => 'required|min:0',
             'kategori' => 'required|min:0',
-            'file' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'file' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
         $image = $request->file('file');
@@ -73,17 +75,20 @@ class ArtikelController extends Controller
     }
 
     public function update(Request $request) {
-        //dd($request);
+        $validator = Validator::make($request->all(), [
+            'file' => 'max:5120', //5MB 
+        ]);
+
         $this->validate($request, [
             'id_artikel' => 'required|min:0',
             'judul'   => 'required|min:0',
             'konten' => 'required|min:0',
             'funfact' => 'required|min:0',
             'kategori' => 'required|min:0',
-            'file' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'file' => 'image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
-        if ($request->hasFile('file')) {
+        if ($request->hasFile('file')) {     
             $image = $request->file('file');
             $fileName = time().'.'.$image->getClientOriginalName();
             $destinationPath = public_path('/asset/images');
@@ -94,8 +99,7 @@ class ArtikelController extends Controller
                 'content' => $request->konten,
                 'funfact' => $request->funfact,
                 'nama_file' => $fileName,
-                'kategori' => $request->kategori,
-                'views' => 0
+                'kategori' => $request->kategori
             );
         }else {
             $data = array(
@@ -104,18 +108,24 @@ class ArtikelController extends Controller
                 'content' => $request->konten,
                 'funfact' => $request->funfact,
                 'nama_file' => $request->file_name,
-                'kategori' => $request->kategori,
-                'views' => 0
+                'kategori' => $request->kategori
             );
         }
+        try { 
+            Artikel::where('id_artikel',$request->id_artikel)->update($data);
+              // Closures include ->first(), ->get(), ->pluck(), etc.
+          } catch(\Illuminate\Database\QueryException $ex){ 
+            dd($ex->getMessage()); 
+            // Note any method of class PDOException can be called on $ex.
+          }
         //Eksekusi
-        Artikel::where('id_artikel',$request->id_artikel)->update($data);
+        //Artikel::where('id_artikel',$request->id_artikel)->update($data);
             $request->session()->flash('pesan',"Data berhasil diperbarui");
-            return redirect()->route('dashboard');
+            return redirect()->route('artikel');
     }
     public function delete(Request $request) {
         $artikel = Artikel::where('id_artikel',$request->id_artikel)->delete();
         //$artikel->delete();
-        return redirect()->route('dashboard')->with('pesan',"Data berhasil dihapus");
+        return redirect()->route('artikel')->with('pesan',"Data berhasil dihapus");
     }
 }
