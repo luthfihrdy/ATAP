@@ -27,11 +27,12 @@ Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 Route::get('/artikel', [App\Http\Controllers\ArtikelController::class, 'index'])->name('artikel');
+Route::get('/profile/{userid}', [App\Http\Controllers\DashboardController::class, 'profile'])->name('profile');
 
 //create
 Route::get('/add', [App\Http\Controllers\ArtikelController::class, 'add'])->name('add');
 //route untuk simpan data 
-Route::post('/adds', [App\Http\Controllers\ArtikelController::class, 'createArtikel'])->name('create')->middleware('auth');;
+Route::post('/adds', [App\Http\Controllers\ArtikelController::class, 'createArtikel'])->name('create')->middleware('auth');
 
 //update
 Route::get('/edit/{artikel}', [App\Http\Controllers\ArtikelController::class, 'edit'])->name('edit')->middleware('auth');;

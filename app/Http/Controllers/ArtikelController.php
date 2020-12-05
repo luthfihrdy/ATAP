@@ -94,7 +94,7 @@ class ArtikelController extends Controller
             $destinationPath = public_path('/asset/images');
             $image->move($destinationPath, $fileName);
             $data = array(
-                'id_akun' => $request->id_akun,
+                'updated_by' => $request->id_akun,
                 'judul' =>  $request->judul,
                 'content' => $request->konten,
                 'funfact' => $request->funfact,
@@ -103,7 +103,7 @@ class ArtikelController extends Controller
             );
         }else {
             $data = array(
-                'id_akun' => $request->id_akun,
+                'updated_by' => $request->id_akun,
                 'judul' =>  $request->judul,
                 'content' => $request->konten,
                 'funfact' => $request->funfact,

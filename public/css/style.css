@@ -204,10 +204,6 @@ Bagian Header
     text-align: center;
 }
 
-.marg-top {
-    margin-top: -6.2%;
-}
-
 
 /*
 ------------------------------------------------------------------
@@ -523,7 +519,7 @@ Bagian Form admin
 ------------------------------------------------------------------
 */
 .add{
-    padding: 50px 10%;
+    padding: 50px 100px;
     background: #FFF5EC;
 }
 
@@ -581,14 +577,14 @@ Bagian Profile Admin
 */
 .profile{
     height: 100%;
-    padding: 50px 300px;
+    padding: 50px 200px;
     text-align: center;
     background: #FFF5EC;
 }
 
 .profile img{
     border-radius: 50%;
-    width: 230px;
+    width: 200px;
 }
 
 .profile h1{
@@ -600,8 +596,14 @@ Bagian Profile Admin
 .profile .row{
     margin-top: 50px;
 }
+.dashname {
+    color: black;
+}
 
-
+.dashname:hover {
+    color: black;
+    text-decoration: none;
+}
 /*
 ------------------------------------------------------------------
 Bagian Login
@@ -666,9 +668,6 @@ Bagian Home
 ------------------------------------------------------------------
 ==================================================================
 */
-.home {
-    margin-top: -2%;
-}
 .section1{
     background: #FFF5EC;
     padding: 70px 70px 40px 70px;
@@ -719,12 +718,17 @@ section 2
     background: #5D8861;
 }
 
+/*edited*/
 .section2 .scroll{
     background: #FFF5EC;
     margin-top: 40px;
-    margin-right: 180vh;
+    /*margin-right: 180vh;edited*/
     padding: 15px 0 15px 10vh;
     border-radius: 0 50px 50px 0;
+}
+
+.section2 .row{
+    margin-right: 20px;
 }
 
 .scroll img{
@@ -744,9 +748,9 @@ Image sayur
 .vag img{
     position: absolute;
     right: 0;
-    top: 0;
+    top: 27vh;
     width: 130vh;
-    margin-top: 5%;
+    margin-top: -120px;
 }
 
 /*
@@ -754,6 +758,10 @@ Image sayur
 Section3
 =-=-=-=-=-=-=
 */
+
+.home {
+    margin-top: -1.5%;
+}
 
 .section3{
     background: #FFF5EC;
@@ -913,10 +921,10 @@ Bagian Artikel
 ------------------------------------------------------------------
 ==================================================================
 */
-
-.article, .sub-article {
-    margin-top: -1.2%;
+.article {
+    margin-top: -1.5%;
 }
+
 .article .wm, .sub-article .wm, .about .wm{
     text-align: center;
     letter-spacing: 5px;
@@ -925,7 +933,7 @@ Bagian Artikel
 .article .vag{
     position: absolute;
     right: 55vh;
-    top: 7.3vh;
+    top: 0;
 }
 
 
@@ -933,22 +941,12 @@ Bagian Artikel
     width: 100vh;
 }
 
-.article .sub-title{
-    position: absolute;
-    right: 88vh;
-    top: 67vh;
-    font-weight: bold;
-    color: #fff;
-    letter-spacing: 3px;
-}
+
 
 .article h2{
     font-size: 30pt;
 }
 
-.article .section2{
-    display: flex;
-}
 
 .article .section3{
     padding: 70px 100vh 80px 70px;
@@ -966,6 +964,10 @@ Bagian Sub Artikel
 ------------------------------------------------------------------
 ==================================================================
 */
+.sub-article {
+    margin-top: -1.5%;
+}
+
 .sub-article .vag img{
     width: 70vh;
 }
@@ -973,15 +975,17 @@ Bagian Sub Artikel
 .sub-article .vag{
     position: absolute;
     right: 75vh;
-    top: 15vh;
+    top: 0vh;
 }
 
-.sub-article .sub-title{
-    position: absolute;
-    right: 86vh;
-    top: 77vh;
+/*edited remove all classes include .sub-title*/
+
+.sub-title{
     font-weight: bold;
     color: #fff;
+    text-align: center;
+    margin-right: 25vh;
+    padding: 10vh 0 0 0;
     letter-spacing: 3px;
     z-index: 1;
 }
@@ -1018,10 +1022,25 @@ Section top
     color: black;
 }
 
+/*edited*/
+.sectiont .col-2{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+}
+
+.funfact{
+    position: fixed;    
+    background: #FFEDDE;
+}
+
 .funfact p{
-    padding: 10px 25px 0 20px;
+    padding: 10px 25px 20px 20px;
     font-size: 16pt;
 }
+/*end of edited*/
+
 
 .sectiont .boxt{
     padding: 10px 0 10px 20px;
@@ -1058,24 +1077,11 @@ Bagian About
     margin-top: -1.5%;
 }
 
-.about .sub-title{
-    position: absolute;
-    right: 95vh;
-    top: 67vh;
-    font-weight: bold;
-    color: #fff;
-    letter-spacing: 3px;
-}
-
 .about .section3{
     padding: 150px 50vh;
     text-align: center;
     color: #495057;
     font-size: 16pt;
-}
-
-.about h2 {
-    font-size: 30pt;
 }
 
 .about .section3 p{
@@ -1115,7 +1121,28 @@ Bagian About
     font-weight: bold;
 }
 
+/*new css*/
 .about .section1 .row{
     padding: 0 150px;
+}
+
+.sectiont .author p{
+    font-size: 14pt;
+    margin-bottom: -2px;
+}
+
+.sectiont .author p:nth-child(1){
+    font-weight: bold;
+    color: #5D8861;
+}
+
+.author{
+    justify-self: center;
+    margin-bottom: 40px;
+    margin-left: -15px;
+}
+
+.marg-top {
+    margin-top: -6%;
 }
 

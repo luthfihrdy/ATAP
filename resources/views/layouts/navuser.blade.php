@@ -32,7 +32,7 @@
                 <li><a href="{{route('home')}}">HOME</a></li>
                 <li><a href="{{route('articles')}}">ARTICLE</a></li>
                 <li>
-                    <a href="asd">
+                    <a href="{{route('home')}}">
                         <img src="{{asset('asset/logo-hitam.png')}}" alt="ATAP logo" id="logo">
                     </a>
                 </li>
@@ -42,7 +42,7 @@
             {{-- if admin login --}}
             @if(Auth::check())
             <ul>
-                <li class="right marg-top"><a href="{{route('dashboard')}}">Admin</a></li>
+                <li class="right marg-top"><a href="{{route('dashboard')}}">DASH</a></li>
             </ul>
             @endif
         </div>

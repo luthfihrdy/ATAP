@@ -14,14 +14,20 @@
         </div>
 
         <div class="vag">
-            <img src="asset/sayur.png" alt="vegetables">
+            <img src="{{asset('asset/sayur.png')}}" alt="vegetables">
         </div>
 
+        <!--edited-->
         <div class="section2">
-            <div class="scroll">
-                <a class="arrow" href="#sc">SCROLL<img src="{{asset('asset/panah-hijau.svg')}}"></a>    
+            <div class="row">
+                <div class="col-2">
+                    <div class="scroll">
+                        <a class="arrow" href="#sc">SCROLL<img src="{{asset('asset/panah-hijau.svg')}}"></a>    
+                    </div>
+                </div>
             </div>
         </div>
+        <!--end of edited-->
 
         <div class="section3" id="sc">
             <div class="row">

@@ -43,11 +43,13 @@
             </div>
             <div class="admin row">
                 <div class="col-4"> 
-                <img src="{{asset('asset/ruby.png')}}" alt="image">
+                    <a href="{{route('profile',['userid'=>Auth::user()->id_akun])}}">
+                        <img src="{{asset('asset/images/profile/'.Auth::user()->nama_file)}}" alt="{{Auth::user()->nama_file}}">
+                    </a>
                 </div>
                 <div class="col-8">
                 <ul>
-                    <li class="name" name="adm">{{ Auth::user()->nama }}</li>
+                    <a href="{{route('profile',['userid'=>Auth::user()->id_akun])}}" class="dashname"><li class="name" name="adm">{{ Auth::user()->nama }}</li></a>
                     <li>Administrator</li>
                 </ul>
                 </div>
@@ -77,8 +79,8 @@
                 <div class="top">
                     <ul>
                         <li><a href="{{route('home')}}"><button class="btn-light">View Site</button></a></li>
-                        <li><a href=""><img src="{{asset('asset/ruby.png')}}" alt="profile"></a></li>
-                        <li p name="adm"><a href="#">{{ Auth::user()->nama }}</a></li>
+                        <li><a href="{{route('profile',['userid'=>Auth::user()->id_akun])}}"><img src="{{asset('asset/images/profile/'.Auth::user()->nama_file)}}" alt="{{Auth::user()->nama_file}}"></a></li>
+                        <li p name="adm"><a href="{{route('profile',['userid'=>Auth::user()->id_akun])}}">{{ Auth::user()->nama }}</a></li>
                     </ul>
                 </div>
             </div>

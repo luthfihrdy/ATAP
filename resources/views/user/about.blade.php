@@ -4,16 +4,22 @@
     <div class="section1">
       <h1 class="wm">ABOUT</h1>
     </div>
-
-    <div class="sub-title">
-      <h2>ABOUT</h2>
-    </div>
-
+    <!--edited-->
     <div class="section2">
-        <div class="scroll">
-          <a class="arrow" href="#sc">SCROLL<img src="asset/panah-hijau.svg"></a>    
-        </div>
-    </div>
+      <div class="row">
+          <div class="col-2">
+              <div class="scroll">
+                  <a class="arrow" href="#sc">SCROLL<img src="asset/panah-hijau.svg"></a>    
+              </div>
+          </div>
+          <div class="col-10">
+            <div class="sub-title">
+              <h2>ABOUT</h2>
+            </div>
+          </div>
+      </div>
+  </div>
+  <!--end of edited-->
 
     <div class="wmbg">
       <img src="asset/logo-hitam.png" alt="vegetables">

@@ -9,15 +9,22 @@
         <img src="asset/sayur.png" alt="vegetables">
     </div>
     
-    <div class="sub-title">
-      <h2>ARTICLES</h2>
-    </div>
-
+    <!--edited-->
     <div class="section2">
-        <div class="scroll">
-          <a class="arrow" href="#sc">SCROLL<img src="asset/panah-hijau.svg"></a>
-        </div>
-    </div>
+      <div class="row">
+          <div class="col-2">
+              <div class="scroll">
+                  <a class="arrow" href="#sc">SCROLL<img src="asset/panah-hijau.svg"></a>    
+              </div>
+          </div>
+          <div class="col-10">
+            <div class="sub-title">
+              <h2>ARTICLES</h2>
+            </div>
+          </div>
+      </div>
+  </div>
+  <!--end of edited-->
 
     <div class="section3" id="sc">
       <p>Part of the enjoyment of planning your garden is choosing which seed varieties you want to grow. Below are a few articles about you want to plant</p>
