@@ -94,7 +94,7 @@
             </div>
             <div class="keterangan">
                 <h1 class="wm">ATAP</h1>
-                <p>ATAP or Aplikasi Tanam Pangan is Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ATAP or Aplikasi Tanam Pangan is Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>ATAP is a web-based application that designed to explain how to grow a plant properly and correctly, especially for staple food plant. ATAP have some fun facts too about the plant that can give more information. You can use ATAP if you want to grow food plants so you can plant them in the right way, if you want to know about staple food fact and if you want to learn something new about planting.</p>
                 <div class="btn-link">
                     <a href="{{route('about')}}">
                         <img src="asset/panah-hijau.svg">

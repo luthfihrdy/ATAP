@@ -27,7 +27,12 @@
                     </div>
                   </div>
             </div>
-
+            @if(session()->has('pesan'))
+                <br>
+                <div class="alert alert-success">
+                    {{session()->get('pesan')}}
+                </div>
+            @endif
             <!--content table-->
             <div class="content-table">
                 <div class="margin">

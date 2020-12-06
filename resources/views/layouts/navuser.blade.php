@@ -20,6 +20,7 @@
 
         <!--Our Css-->
         <link rel="stylesheet" href="{{asset('css/style.css')}}">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
         <!--
             {{-- <link rel="stylesheet" href="{{ asset('css/style.css') }}"> --}}
         -->

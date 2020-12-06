@@ -7,6 +7,7 @@ use App\Artikel;
 use DB;
 Use Exception;
 use Validator;
+use Alert;
 
 class ArtikelController extends Controller
 {
@@ -59,11 +60,18 @@ class ArtikelController extends Controller
             'kategori' => $request->kategori,
             'views' => 0
         );
-            
-        Artikel::create($data);
-        // dd($data);
-        
-        return redirect()->route('dashboard');
+
+        try { 
+            Artikel::create($data);
+            $request->session()->flash('pesan',"Data Created Successfully");
+            return redirect()->route('dashboard');
+        } catch(\Illuminate\Database\QueryException $ex){ 
+            dd($ex->getMessage()); 
+
+        }
+        // Artikel::create($data);
+        // $request->session()->flash('pesan',"Data Created Successfully");
+        // return redirect()->route('dashboard');
     }
 
     public function edit($artikel){
@@ -113,19 +121,20 @@ class ArtikelController extends Controller
         }
         try { 
             Artikel::where('id_artikel',$request->id_artikel)->update($data);
-              // Closures include ->first(), ->get(), ->pluck(), etc.
-          } catch(\Illuminate\Database\QueryException $ex){ 
+            $request->session()->flash('pesan',"Data Updated Successfully");
+            return redirect()->route('artikel');
+        } catch(\Illuminate\Database\QueryException $ex){ 
             dd($ex->getMessage()); 
-            // Note any method of class PDOException can be called on $ex.
-          }
+
+        }
+          
         //Eksekusi
         //Artikel::where('id_artikel',$request->id_artikel)->update($data);
-            $request->session()->flash('pesan',"Data berhasil diperbarui");
-            return redirect()->route('artikel');
+            
     }
     public function delete(Request $request) {
         $artikel = Artikel::where('id_artikel',$request->id_artikel)->delete();
         //$artikel->delete();
-        return redirect()->route('artikel')->with('pesan',"Data berhasil dihapus");
+        return redirect()->route('artikel')->with('pesan',"Data has been deleted");
     }
 }

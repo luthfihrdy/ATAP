@@ -1,6 +1,11 @@
 @extends('layouts.navadmin')
 @section('content')
 <div class="content">
+    @if(session()->has('pesan'))
+        <div class="alert alert-success">
+            {{session()->get('pesan')}}
+        </div>
+    @endif
     <!--content table-->
     <div class="content-table">
         <div class="margin">
