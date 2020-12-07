@@ -72,7 +72,7 @@ Register
   background: #5D8861;
 }
 
-.navbar, .card-body{
+.navbar, .register .card-body{
   background: #FFEDDE;
   color: #5D8861;
   font-weight: bold;
