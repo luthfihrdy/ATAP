@@ -27,7 +27,11 @@ class UserController extends Controller{
         //increment views
         $data = Artikel::where('id_artikel',$artikel)->increment('views');
         $data = Artikel::where('id_artikel',$artikel)->first();
-        $artikel = DB::table('v_artikel')->select('nama')->where('id_artikel',$artikel)->get();
+        //$artikel = DB::table('v_artikel')->select('nama')->where('id_artikel',$artikel)->get();
+        $artikel = DB::table('artikels')
+                        ->join('users','users.id_akun','=','artikels.id_akun')
+                        ->where('id_artikel',$artikel)
+                        ->get('nama');
         return view('user.data',compact('data'),compact('artikel'));
     }
 

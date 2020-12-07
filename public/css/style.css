@@ -1147,3 +1147,150 @@ Bagian About
     margin-top: -6%;
 }
 
+
+/*
+==========================
+Break Point
+--------------------------
+HP
+--------------------------
+*/
+@media (min-device-width:360px) and (max-device-width: 768px){
+    /*home*/
+    .home, .article, .sub-article, .about{
+        width: 120vh;
+    }
+
+    .section1{
+        padding: 0 0 0 10vh;
+    }
+    .section2 .scroll{
+        display: none;
+    }
+
+    .vag img{
+        left: 70vh;
+        width: 50vh;
+        margin-top: 15vh;
+    }
+
+    .section1 .go{
+        padding: 10px 30px;
+    }
+
+    .section1 .search{
+        padding: 15px 15px 15px 20px;
+        margin-right: 55vh;
+    }
+
+    .section1 input[type="text"]{
+        padding: 10px 10px 10px 10px;
+    }
+
+    .section3, .section5{
+        padding: 70px 30px 20px 0;
+    }
+
+    .section3 .boxt{
+        font-size: 20pt;
+    }
+
+    .img-article .detail{
+        bottom: 0;
+        opacity: 1;
+    }
+
+    .section4{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .section4 .btn-link{
+        margin: 15vh;
+    }
+
+    .keterangan{
+        padding: 0 10vh 10vh 10vh;
+    }
+
+    .icon img{
+        display: none;
+    }
+
+    /*footer*/
+    .footer{
+        width: 100%;
+        height: auto;
+    }
+
+    .icon{
+        display: none;
+    }
+
+    .konten{
+        padding: 5vh 13vh;
+        justify-content: center;
+    }
+
+    .copy{
+        padding: 2vh 0;
+    }
+
+    /*article*/
+    
+    .article .vag{
+        position: absolute;
+        left: 0;
+        top: 9vh;
+    }
+    
+    .article .vag img{
+        width: 50vh;
+    }
+
+    .article .wm, .sub-article .wm, .about .wm{
+        padding: 10vh 0;
+    }
+
+    
+    .content-article{
+        padding: 0 60vh;
+    }
+
+    .article .section3{
+        padding: 5vh 10vh;
+    }
+
+    /*sub article*/
+    .sub-article .vag{
+        display: none;
+    }
+
+    .sub-title{
+        padding: 5vh 0;
+    }
+
+    .sub-article .section3 .row {
+        padding: 0 20vh 0 10vh;
+    }
+
+    .sectiont .funfact{
+        margin-left: 42vh;
+    }
+
+    .sub-article .sectiont .row{
+        padding-right: 10vh;
+    }
+
+    /*about*/
+    .about .section3{
+        padding: 100px 10vh;
+        margin-bottom: -10px;
+    }
+
+    .wmbg img{
+        top: 5vh;
+        left: 0;
+        width: 40vh;
+    }
+}

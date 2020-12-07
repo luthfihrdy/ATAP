@@ -28,7 +28,16 @@ class ArtikelController extends Controller
      */
     public function index()
     {
-        $artikel_v = DB::table('v_artikel')->select('id_artikel','judul','created_at','views','nama')->get();
+        //$artikel_v = DB::table('v_artikel')->select('id_artikel','judul','created_at','views','nama')->get();
+        $artikel_v = DB::table('artikels')
+                        ->join('users','users.id_akun','=','artikels.id_akun')
+                        ->get(array(
+                            'id_artikel',
+                            'judul',
+                            'artikels.created_at',
+                            'views',
+                            'nama'
+                        ));
         return view('artikel.index',['artikel' => $artikel_v]);
     }
 
