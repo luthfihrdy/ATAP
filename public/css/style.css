@@ -9,6 +9,8 @@ html{
     scroll-behavior: smooth;
 }
 
+
+
 /*
 ------------------------------------------------------------------
 Buttons
@@ -1032,6 +1034,7 @@ Section top
 }
 
 .funfact{
+    margin-top: 8.1vh;
     position: fixed;    
     background: #FFEDDE;
 }
@@ -1156,9 +1159,13 @@ HP
 --------------------------
 */
 @media (min-device-width:360px) and (max-device-width: 768px){
-    /*home*/
-    .home, .article, .sub-article, .about{
+    /* /home/ */
+    .home, .article, .sub-article, .about, .header, .footer{
         width: 120vh;
+    }
+
+    .header{
+        margin-bottom: -6%;
     }
 
     .section1{
@@ -1217,9 +1224,8 @@ HP
         display: none;
     }
 
-    /*footer*/
+    /* /footer/ */
     .footer{
-        width: 100%;
         height: auto;
     }
 
@@ -1228,7 +1234,8 @@ HP
     }
 
     .konten{
-        padding: 5vh 13vh;
+        margin: 0 2vh;
+        padding: 5vh 20vh;
         justify-content: center;
     }
 
@@ -1236,7 +1243,7 @@ HP
         padding: 2vh 0;
     }
 
-    /*article*/
+    /* /article/ */
     
     .article .vag{
         position: absolute;
@@ -1261,7 +1268,7 @@ HP
         padding: 5vh 10vh;
     }
 
-    /*sub article*/
+    /* /sub article/ */
     .sub-article .vag{
         display: none;
     }
@@ -1292,5 +1299,19 @@ HP
         top: 5vh;
         left: 0;
         width: 40vh;
+    }
+
+    /*header*/
+    .header ul li{
+        padding: 0 4%;
+    }
+
+    .header ul li img{
+        position: relative;
+    }
+
+    #logo{
+        left: 95%;
+        right: 95%;
     }
 }

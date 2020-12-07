@@ -64,6 +64,33 @@ section {
   display: block;
 }
 
+/* --------------------------------------
+Register
+-------------------------------------- */
+
+#app, .register{
+  background: #5D8861;
+}
+
+.navbar, .card-body{
+  background: #FFEDDE;
+  color: #5D8861;
+  font-weight: bold;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+.card-header{
+  background: #FFF5EC;
+  color: #5D8861;
+  font-weight: bold;
+}
+
+input{
+  border: none;
+}
+
+/* ------------------------------ */
+
 body {
   margin: 0;
   font-family: "Nunito", sans-serif;
