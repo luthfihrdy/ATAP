@@ -26,8 +26,19 @@ class ArtikelController extends Controller
     public function index()
     {
         $artikel_v = DB::table('v_artikel')->select('id_artikel','judul','created_at','views','nama')->get();
-        return view('artikel.index',['artikel' => $artikel_v]);
+        
         //print_r($dataTable);
+
+        $namaArtikel = [];
+        $totalView = [];
+
+        foreach ($artikel_v as $Ar ) {
+            $namaArtikel[] = $Ar->judul;
+            $totalView[] = $Ar->views;
+        }
+
+        //dd(json_encode($totalView, JSON_FORCE_OBJECT));
+        return view('artikel.index',['artikel' => $artikel_v,'namaArtikel' => $namaArtikel,'totalView' => $totalView]);
     }
 
     public function add() {

@@ -25,9 +25,6 @@
     <!-- Styles -->
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 
-    <!--Our Css-->
-    <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
-
     {{-- dataTable --}}
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css"/>
@@ -37,6 +34,8 @@
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/browse/sweetalert2@7.18.0/dist/sweetalert2.css">
 
     {{-- highchart --}}
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+
     <script src="https://code.highcharts.com/highcharts.js"></script>
 
 </head>
@@ -99,8 +98,6 @@
     <script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script>
     @include('sweetalert::alert')
 
-    @yield('footer')
-    <script src="https://code.highcharts.com/highcharts.js"></script>
 
 
 </body>
