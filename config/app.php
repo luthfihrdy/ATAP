@@ -161,7 +161,10 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+<<<<<<< HEAD
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+=======
+>>>>>>> parent of 9fd7824... datatable dependencies
 
         /*
          * Package Service Providers...
@@ -227,7 +230,10 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+<<<<<<< HEAD
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
+=======
+>>>>>>> parent of 9fd7824... datatable dependencies
 
     ],
 

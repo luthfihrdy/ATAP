@@ -25,6 +25,7 @@
     <!-- Styles -->
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 
+<<<<<<< HEAD
     {{-- dataTable --}}
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css"/>
@@ -38,6 +39,13 @@
 
     <script src="https://code.highcharts.com/highcharts.js"></script>
 
+=======
+    <!--Our Css-->
+    <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+
+    
+    
+>>>>>>> parent of 9fd7824... datatable dependencies
 </head>
 <body>
     <div class="dashboard">
@@ -94,12 +102,15 @@
             </main>
         </div>
     </div>
+<<<<<<< HEAD
 
     <script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script>
     @include('sweetalert::alert')
 
 
 
+=======
+>>>>>>> parent of 9fd7824... datatable dependencies
 </body>
 
 

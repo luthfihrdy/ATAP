@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 use DB;
+=======
+use Validator,Redirect,Response;
+>>>>>>> parent of 9fd7824... datatable dependencies
 use App\Artikel;
 
 class ArtikelController extends Controller
@@ -25,6 +29,7 @@ class ArtikelController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $artikel_v = DB::table('v_artikel')->select('id_artikel','judul','created_at','views','nama')->get();
         
         //print_r($dataTable);
@@ -39,6 +44,9 @@ class ArtikelController extends Controller
 
         //dd(json_encode($totalView, JSON_FORCE_OBJECT));
         return view('artikel.index',['artikel' => $artikel_v,'namaArtikel' => $namaArtikel,'totalView' => $totalView]);
+=======
+        return view('home');
+>>>>>>> parent of 9fd7824... datatable dependencies
     }
 
     public function add() {
