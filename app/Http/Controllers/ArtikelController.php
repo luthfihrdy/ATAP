@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+<<<<<<< Updated upstream
 use Validator,Redirect,Response;
+=======
+use App\DataTables\ArtikelDataTable;
+>>>>>>> Stashed changes
 use App\Artikel;
 
 class ArtikelController extends Controller
@@ -23,9 +27,15 @@ class ArtikelController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(ArtikelDataTable $dataTable )
     {
+<<<<<<< Updated upstream
         return view('home');
+=======
+        $artikel_v = DB::table('v_artikel')->select('id_artikel','judul','created_at','views','nama')->get();
+        return $dataTable->render('artikel.index',['artikel' => $artikel_v]);
+        //print_r($dataTable);
+>>>>>>> Stashed changes
     }
 
     public function add() {

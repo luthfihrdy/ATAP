@@ -17,12 +17,13 @@ class Artikel extends Model
      * @var array
 
      */
-
+    protected $table = "v_artikel";
     protected $fillable = [
 
-        // 'name',
-        // 'userid',
-        // 'tipe',
+         'judul',
+         'created_at',
+         'nama',
+         'views',
 
     ];
 
