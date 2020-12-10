@@ -36,6 +36,9 @@
     {{-- sweetalert --}}
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/browse/sweetalert2@7.18.0/dist/sweetalert2.css">
 
+    {{-- highchart --}}
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+
 </head>
 <body>
     <div class="dashboard">
@@ -95,6 +98,11 @@
 
     <script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script>
     @include('sweetalert::alert')
+
+    @yield('footer')
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+
+
 </body>
 
 

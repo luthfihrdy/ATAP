@@ -59,8 +59,5 @@ class DashboardController extends Controller
         $profile = DB::table('users')->where('id_akun',$userid)->select('id_akun','username','nama','email','alamat','no_hp','nama_file')->first();
         return view('profile',['profile' => $profile]);
     }
-    public function profile()
-    {
-        return view('layouts.profile');
-    }
+
 }
