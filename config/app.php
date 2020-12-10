@@ -161,11 +161,6 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-<<<<<<< Updated upstream
-=======
-        //UxWeb\SweetAlert\SweetAlertServiceProvider::class,
-        \Yajra\DataTables\DataTablesServiceProvider::class,
->>>>>>> Stashed changes
 
         /*
          * Package Service Providers...
@@ -231,11 +226,6 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-<<<<<<< Updated upstream
-=======
-        'Alert' => UxWeb\SweetAlert\SweetAlert::class,
-        'DataTables' => \Yajra\DataTables\Facades\DataTables::class,
->>>>>>> Stashed changes
 
     ],
 
