@@ -28,8 +28,14 @@
     <!--Our Css-->
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 
+    {{-- dataTable --}}
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css"/>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     
-    
+    {{-- sweetalert --}}
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/browse/sweetalert2@7.18.0/dist/sweetalert2.css">
+
 </head>
 <body>
     <div class="dashboard">
@@ -38,21 +44,27 @@
             <div class="atap">
                 <img src="{{asset('asset/logo-hitam.png')}}" alt="logo">
             </div>
-            <div class="admin">
-                <img src="{{asset('asset/ruby.png')}}" alt="image">
+            <div class="admin row">
+                <div class="col-4"> 
+                    <a href="{{route('profile',['userid'=>Auth::user()->id_akun])}}">
+                        <img src="{{asset('asset/images/profile/'.Auth::user()->nama_file)}}" alt="{{Auth::user()->nama_file}}">
+                    </a>
+                </div>
+                <div class="col-8">
                 <ul>
-                    <li class="name" name="adm">{{ Auth::user()->nama }}</li>
+                    <a href="{{route('profile',['userid'=>Auth::user()->id_akun])}}" class="dashname"><li class="name" name="adm">{{ Auth::user()->nama }}</li></a>
                     <li>Administrator</li>
                 </ul>
+                </div>
             </div>
             <div class="menu">
                 <ul>
                     <li class="{{ Request::is('dashboard') ? 'nav-active' : '' }}"><a href="{{route('dashboard')}}">Dashboard</a></li> <!--use class nav-active if in current page-->
-                    <li class="{{ Request::is('articles') ? 'nav-active' : '' }}"><a href="">Articles</a></li>
+                    <li class="{{ Request::is('artikel') ? 'nav-active' : '' }}"><a href="{{route('artikel')}}">Articles</a></li>
                 </ul>
             </div>
             <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                             document.getElementById('logout-form').submit();">
+            document.getElementById('logout-form').submit();">
                 <button class="btn-green">
                     {{ __('Logout') }}
                 </button>
@@ -64,13 +76,15 @@
     
         <!--main content-->
         <div class="main">
-    
+
             <!--header-->
-            <div class="header">
+            <div class="head">
                 <div class="top">
-                    <button class="btn-light">View Site</button>
-                    <a href="{{ route('profile') }}"><img src="{{asset('asset/ruby.png')}}" alt="profile"></a>
-                <p class="adm" style="text-align:left"><a href="{{ route('profile') }}">{{ Auth::user()->nama }}</a></p>
+                    <ul>
+                        <li><a href="{{route('home')}}"><button class="btn-light">View Site</button></a></li>
+                        <li><a href="{{route('profile',['userid'=>Auth::user()->id_akun])}}"><img src="{{asset('asset/images/profile/'.Auth::user()->nama_file)}}" alt="{{Auth::user()->nama_file}}"></a></li>
+                        <li p name="adm"><a href="{{route('profile',['userid'=>Auth::user()->id_akun])}}">{{ Auth::user()->nama }}</a></li>
+                    </ul>
                 </div>
             </div>
             <main>
@@ -78,6 +92,9 @@
             </main>
         </div>
     </div>
+
+    <script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script>
+    @include('sweetalert::alert')
 </body>
 
 

@@ -16,6 +16,7 @@ class CreateArtikelsTable extends Migration
         Schema::create('artikels', function (Blueprint $table) {
             $table->bigIncrements('id_artikel');
             $table->integer('id_akun');
+            $table->integer('updated_by')->nullable();
             $table->string('judul');
             $table->text('content');
             $table->text('funfact');

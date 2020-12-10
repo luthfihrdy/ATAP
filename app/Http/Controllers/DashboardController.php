@@ -26,8 +26,38 @@ class DashboardController extends Controller
     public function index()
     {
         //$artikel = Artikel::all();
-        $artikel_v = DB::table('v_artikel')->select('id_artikel','judul','created_at','views','nama')->get();
-        return view('dashboard',['artikel' => $artikel_v]);
+        //$artikel_c = DB::table('v_artikel')->select('id_artikel','judul','created_at','views','nama')->get();
+        $artikel_c = DB::table('artikels')
+                        ->join('users','users.id_akun','=','artikels.id_akun')
+                        ->get(array(
+                            'id_artikel',
+                            'judul',
+                            'artikels.created_at',
+                            'views',
+                            'nama'
+                        ));
+        //$artikel_v = DB::table('v_artikel')->select('id_artikel','judul','created_at','views','nama')->take(5)->orderBy('created_at','desc')->get();
+        $artikel_v = DB::table('artikels')
+                        ->join('users','users.id_akun','=','artikels.id_akun')
+                        ->orderBy('created_at','desc')
+                        ->take(5)
+                        ->get(array(
+                            'id_artikel',
+                            'judul',
+                            'artikels.created_at',
+                            'views',
+                            'nama'
+                        ));
+        //$artikel_s = DB::table('v_artikel')->select('id_artikel','judul','created_at','views','nama')->sum('views');
+        $artikel_s = DB::table('artikels')
+                        ->join('users','users.id_akun','=','artikels.id_akun')
+                        ->sum('views');
+        return view('dashboard',['artikel' => $artikel_v,'artikel_c' => $artikel_c,'jumlah' => $artikel_s]);
+    }
+
+    public function profile($userid) {
+        $profile = DB::table('users')->where('id_akun',$userid)->select('id_akun','username','nama','email','alamat','no_hp','nama_file')->first();
+        return view('profile',['profile' => $profile]);
     }
     public function profile()
     {

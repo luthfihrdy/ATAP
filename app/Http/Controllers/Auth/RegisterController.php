@@ -56,6 +56,7 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'alamat' => ['required', 'max:255'],
             'nohp' => ['required', 'max:20'],
+            'file' => ['required','image', 'mimes:jpeg,png,jpg,gif,svg'],
         ]);
     }
 
@@ -67,6 +68,12 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        //dd($data['file']->getClientOriginalName());
+        $image = $data['file'];
+        $fileName = time().'.'.$image->getClientOriginalName();
+        //dd(time().'.'.$data['file']->getClientOriginalName());
+        $destinationPath = public_path('/asset/images/profile');
+        $image->move($destinationPath, $fileName);
         return User::create([
             'username' => $data['username'],
             'nama' => $data['nama'],
@@ -74,6 +81,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'alamat' => $data['alamat'],
             'no_hp' => $data['nohp'],
+            'nama_file' => $fileName,
         ]);
     }
 }
