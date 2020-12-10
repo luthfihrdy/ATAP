@@ -27,6 +27,7 @@ Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 Route::get('/artikel', [App\Http\Controllers\ArtikelController::class, 'index'])->name('artikel');
+Route::get('/graph', [App\Http\Controllers\GraphController::class, 'index'])->name('graph');
 Route::get('/profile/{userid}', [App\Http\Controllers\DashboardController::class, 'profile'])->name('profile');
 
 //create

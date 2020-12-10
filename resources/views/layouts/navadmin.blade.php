@@ -61,6 +61,7 @@
                 <ul>
                     <li class="{{ Request::is('dashboard') ? 'nav-active' : '' }}"><a href="{{route('dashboard')}}">Dashboard</a></li> <!--use class nav-active if in current page-->
                     <li class="{{ Request::is('artikel') ? 'nav-active' : '' }}"><a href="{{route('artikel')}}">Articles</a></li>
+                    <li class="{{ Request::is('graph') ? 'nav-active' : '' }}"><a href="{{route('graph')}}">graph</a></li>
                 </ul>
             </div>
             <a href="{{ route('logout') }}" onclick="event.preventDefault();

@@ -39,6 +39,7 @@
                 </tbody>
             </table>
         </div>
+
     </div>
 </div>
 <script>
@@ -46,4 +47,49 @@
         $('#MyData').DataTable();
     } );
 </script>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+<script>
+    Highcharts.chart('graph', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Monthly Average Rainfall'
+    },
+    subtitle: {
+        text: 'Source: WorldClimate.com'
+    },
+    xAxis: {
+        categories: {!!json_encode($namaArtikel)!!},
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Total View'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'View',
+        data: [<?php echo join($totalView, ',') ?>]
+
+    }]
+});
+      
+</script>
+
 @endsection
