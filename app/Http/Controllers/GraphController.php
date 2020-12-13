@@ -8,6 +8,7 @@ use DB;
 
 class GraphController extends Controller
 {
+    // ini buat fungsi graph ambil data 
     public function index()
     {
         //$artikel = Artikel::all();
