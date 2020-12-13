@@ -38,6 +38,7 @@ class ArtikelController extends Controller
                             'views',
                             'nama'
                         ));
+
         return view('artikel.index',['artikel' => $artikel_v]);
     }
 

@@ -39,6 +39,7 @@
                 </tbody>
             </table>
         </div>
+
     </div>
 </div>
 <script>
@@ -46,4 +47,7 @@
         $('#MyData').DataTable();
     } );
 </script>
+
+
+
 @endsection

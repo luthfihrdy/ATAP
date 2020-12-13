@@ -385,18 +385,19 @@ Content
     height: 100vh;
 }
 
-svg{
+/* dimatikan karena bentrok sama graph */
+/*svg{
     width:40px;
     height:40px;
-}
+}*/
 
-rect{
+/*rect{
     width:40px;
     height:40px;
     fill: #5D8861;
     rx: 10px;
     ry: 10px;
-}
+}*/
 
 .title{
     display: flex;

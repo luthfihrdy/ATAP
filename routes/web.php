@@ -28,6 +28,9 @@ Auth::routes();
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 Route::get('/artikel', [App\Http\Controllers\ArtikelController::class, 'index'])->name('artikel');
 Route::get('/profile/{userid}', [App\Http\Controllers\DashboardController::class, 'profile'])->name('profile');
+//panggil graph
+Route::get('/graph', [App\Http\Controllers\GraphController::class, 'index'])->name('graph');
+
 
 //create
 Route::get('/add', [App\Http\Controllers\ArtikelController::class, 'add'])->name('add');
