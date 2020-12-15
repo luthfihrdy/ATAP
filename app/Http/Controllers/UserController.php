@@ -36,6 +36,7 @@ class UserController extends Controller{
     }
 
     public function search(Request $request) {
+        //dd($request);
         $cari = $request->search;
         $artikel = DB::table('artikels')->where('judul','like',"%".$cari."%")->orWhere('kategori','like',"%".$cari."%")->get();
         return view('user.articles',['artikel' => $artikel]);

@@ -7,7 +7,7 @@
             <h2>TANAM PANGAN</h2>
             <div class="search">
                 <form action="{{route('search')}}" method="GET">
-                    <input type="text" placeholder="What to Plant Now?" name="search" value="{{ old('cari') }}">
+                    <input type="text" placeholder="What to Plant Now?" name="search" value="{{ old('search') }}">
                     <button type="submit" class="go">GO</button>  
                 </form>
             </div>

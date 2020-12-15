@@ -30,6 +30,7 @@ Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'inde
 //Route Artikel & export excel
 Route::get('/artikel', [App\Http\Controllers\ArtikelController::class, 'index'])->name('artikel');
 Route::get('/artikel/export_excel', [App\Http\Controllers\ArtikelController::class, 'export_excel']);
+Route::get('/artikel/search', [App\Http\Controllers\ArtikelController::class, 'search'])->name('searchArtikel');
 
 Route::get('/profile/{userid}', [App\Http\Controllers\DashboardController::class, 'profile'])->name('profile');
 //panggil graph

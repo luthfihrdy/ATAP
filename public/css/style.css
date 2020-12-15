@@ -542,6 +542,10 @@ Bagian Form admin
     height: 50px;
 }
 
+.form-search {
+    height: 40px;
+}
+
 .add form{
     margin-top: 40px;
 }

@@ -158,4 +158,24 @@ class ArtikelController extends Controller
         //$artikel->delete();
         return redirect()->route('artikel')->with('pesan',"Data has been deleted");
     }
+
+    public function search(Request $request) {
+        $cari = $request->search;
+        //dd($request);
+        //$artikel = DB::table('artikels')->where('judul','like',"%".$cari."%")->orWhere('kategori','like',"%".$cari."%")->get();
+        $artikel_v = DB::table('artikels')
+                        ->join('users','users.id_akun','=','artikels.id_akun')
+                        ->where('judul','like',"%".$cari."%")
+                        ->orWhere('artikels.created_at','like',"%".$cari."%")
+                        ->orWhere('nama','like',"%".$cari."%")
+                        ->get(array(
+                            'id_artikel',
+                            'judul',
+                            'artikels.created_at',
+                            'views',
+                            'nama'
+                        ));
+        $request->session()->flash('searched',"1");
+        return view('artikel.index',['artikel' => $artikel_v]);
+    }
 }
