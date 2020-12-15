@@ -13,6 +13,7 @@
                 <h5>Articles</h5>
                 <a href="{{route('add')}}"><button class="btn-green">Add New Article</button></a>
             </div>
+            <a href="/artikel/export_excel" class="btn btn-success my-3" target="_blank">EXPORT EXCEL</a>
             <table class="table table-borderless display" id="MyData">
                 <thead>
                 <tr>

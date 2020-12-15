@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Artikel;
+
+use App\Exports\ArtikelExport;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Controllers\Controller;
+
 use DB;
 Use Exception;
 use Validator;
@@ -41,6 +46,12 @@ class ArtikelController extends Controller
 
         return view('artikel.index',['artikel' => $artikel_v]);
     }
+
+    //export excel
+    public function export_excel()
+	{
+		return Excel::download(new ArtikelExport, 'Artikel.xlsx');
+	}
 
     public function add() {
         return view('artikel.add');
