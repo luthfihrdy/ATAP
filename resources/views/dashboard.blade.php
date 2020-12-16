@@ -2,8 +2,8 @@
 @section('content')
         <div class="content">
             <div class="title">
-                <svg>
-                    <rect>
+                <svg class="svg-dash">
+                    <rect class="rect-dash"></rect>
                 </svg>
                 <p>Dashboard</p>
             </div>

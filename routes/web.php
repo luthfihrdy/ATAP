@@ -28,9 +28,11 @@ Auth::routes();
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
 //Route Artikel & export excel
-Route::get('/artikel', [App\Http\Controllers\ArtikelController::class, 'index'])->name('artikel');
-Route::get('/artikel/export_excel', [App\Http\Controllers\ArtikelController::class, 'export_excel']);
-Route::get('/artikel/search', [App\Http\Controllers\ArtikelController::class, 'search'])->name('searchArtikel');
+Route::get('/artikel', [App\Http\Controllers\ArtikelController::class, 'index'])->name('artikel')->middleware('auth');
+Route::get('/artikel/export_excel', [App\Http\Controllers\ArtikelController::class, 'export_excel'])->middleware('auth');
+Route::get('/artikel/export_pdf', [App\Http\Controllers\ArtikelController::class, 'export_pdf'])->middleware('auth');
+
+Route::get('/artikel/search', [App\Http\Controllers\ArtikelController::class, 'search'])->name('searchArtikel')->middleware('auth');
 
 Route::get('/profile/{userid}', [App\Http\Controllers\DashboardController::class, 'profile'])->name('profile');
 //panggil graph

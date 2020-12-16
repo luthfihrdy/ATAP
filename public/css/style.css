@@ -386,18 +386,18 @@ Content
 }
 
 /* dimatikan karena bentrok sama graph */
-/*svg{
+.svg-dash{
     width:40px;
     height:40px;
-}*/
+}
 
-/*rect{
+.rect-dash{
     width:40px;
     height:40px;
     fill: #5D8861;
     rx: 10px;
     ry: 10px;
-}*/
+}
 
 .title{
     display: flex;

@@ -11,11 +11,20 @@
         <div class="margin">
             <div class="title">
                 <h5>Articles</h5>
-                <a href="{{route('add')}}"><button class="btn-green">Add New Article</button></a>
+                <a href="{{route('add')}}"><button class="btn-green"><i class="fa fa-plus"></i> Add New Article</button></a>
             </div>
             <div class="row">
                 <div class="col-6">
-                    <a href="/artikel/export_excel" class="btn btn-light form-search my-3" target="_blank">EXPORT EXCEL</a>
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-light form-search my-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-print"></i> EXPORT
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <a href="/artikel/export_excel" class="dropdown-item" target="_blank"><i class="fa fa-file-excel"></i> EXCEL</a>
+                            <a href="/artikel/export_pdf" class="dropdown-item" target="_blank"><i class="fa fa-file-pdf"></i> PDF</a>
+                        </div>
+                    </div>
+                    
                 </div>
                 <div class="col my-auto">
                     

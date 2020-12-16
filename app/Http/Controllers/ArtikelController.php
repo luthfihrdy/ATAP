@@ -8,11 +8,13 @@ use App\Artikel;
 use App\Exports\ArtikelExport;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Controllers\Controller;
+use PDF;
 
 use DB;
 Use Exception;
 use Validator;
 use Alert;
+
 
 class ArtikelController extends Controller
 {
@@ -51,7 +53,23 @@ class ArtikelController extends Controller
     public function export_excel()
 	{
 		return Excel::download(new ArtikelExport, 'Artikel.xlsx');
-	}
+    }
+    
+    public function export_pdf()
+    {
+    	$artikel_v = DB::table('artikels')
+                        ->join('users','users.id_akun','=','artikels.id_akun')
+                        ->get(array(
+                            'id_artikel',
+                            'judul',
+                            'artikels.created_at',
+                            'views',
+                            'nama'
+                        ));
+ 
+    	$pdf = PDF::loadview('artikel.artikel_pdf',['artikel'=>$artikel_v]);
+    	return $pdf->stream('laporan-artikel-pdf');
+    }
 
     public function add() {
         return view('artikel.add');
